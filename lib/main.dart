@@ -1,10 +1,19 @@
 import 'package:e_commerce/screens/home.dart';
 import 'package:e_commerce/screens/my_advertisement.dart';
 import 'package:e_commerce/screens/profile.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(EasyLocalization(
+    child: MyApp(),
+    saveLocale: true,
+    path: 'assets/i18n',
+    supportedLocales: [
+      Locale('en', 'US'),
+      Locale('pt', 'BR'),
+    ],
+  ));
 }
 
 class MyApp extends StatefulWidget {
@@ -30,6 +39,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         highlightColor: Color.fromARGB(50, 153, 51, 255),
@@ -45,15 +57,15 @@ class _MyAppState extends State<MyApp> {
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
-              label: 'Home',
+              label: 'home'.tr().toString(),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.local_mall),
-              label: 'My Advertisement',
+              label: 'my_advertisement'.tr().toString(),
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              label: 'Profile',
+              label: 'profile'.tr().toString(),
             ),
           ],
           onTap: onTap,

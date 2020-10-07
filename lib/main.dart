@@ -43,6 +43,7 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: ThemeData(
+        fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,
         highlightColor: Color.fromARGB(50, 153, 51, 255),
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -52,6 +53,8 @@ class _MyAppState extends State<MyApp> {
           currentIndex: _currentIndex,
           selectedItemColor: Color.fromARGB(255, 153, 51, 255),
           iconSize: 24,
+          selectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
+          unselectedLabelStyle: TextStyle(fontWeight: FontWeight.w600),
           selectedIconTheme: IconThemeData(size: 30),
           elevation: 10,
           items: [

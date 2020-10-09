@@ -46,6 +46,7 @@ class _MyAppState extends State<MyApp> {
         fontFamily: 'Montserrat',
         primarySwatch: Colors.blue,
         highlightColor: Color.fromARGB(50, 153, 51, 255),
+        primaryColor: Color.fromARGB(255, 153, 51, 255),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(

@@ -4,5 +4,9 @@
     "profile": "Profile",
     "language": "Language",
     "sales": "Sales",
-    "purchases": "Purchases"
+    "purchases": "Purchases",
+    "new_advertisement": "New Advertisement",
+    "title": "Title",
+    "price": "Price",
+    "description": "Description"
 }

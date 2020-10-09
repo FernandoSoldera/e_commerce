@@ -1,4 +1,5 @@
 import 'package:e_commerce/components/tab_item.dart';
+import 'package:e_commerce/screens/new_advertisement.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
@@ -19,6 +20,21 @@ class MyAdvertisement extends StatelessWidget {
               TabItem(title: 'sales'.tr().toString()),
             ],
           ),
+          actions: [
+            FlatButton(
+              highlightColor: Colors.transparent,
+              splashColor: Colors.white10,
+              onPressed: () => {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => NewAdvertisement()))
+              },
+              child: Icon(
+                Icons.add,
+                color: Colors.white,
+                size: 40,
+              ),
+            )
+          ],
         ),
         body: TabBarView(
           children: [

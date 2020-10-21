@@ -8,5 +8,6 @@
     "new_advertisement": "New Advertisement",
     "title": "Title",
     "price": "Price",
-    "description": "Description"
+    "description": "Description",
+    "confirm_button": "Confirm"
 }
